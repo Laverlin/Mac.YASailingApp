@@ -44,7 +44,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F356329829A1439F00E0A8D1 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		F356329929A1448100E0A8D1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F3B21EB4298BE21B007C93FF /* YaSailingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YaSailingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3B21EBA298BE21B007C93FF /* YaSailingApp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YaSailingApp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,7 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				F356329929A1448100E0A8D1 /* .gitignore */,
-				F356329829A1439F00E0A8D1 /* LICENSE.md */,
 				F3B21EBE298BE21B007C93FF /* YaSailingApp Watch App */,
 				F3B21EB5298BE21B007C93FF /* Products */,
 			);
