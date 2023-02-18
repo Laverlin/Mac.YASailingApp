@@ -9,30 +9,18 @@
 /* Begin PBXBuildFile section */
 		F3B21EBB298BE21B007C93FF /* YaSailingApp Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F3B21EBA298BE21B007C93FF /* YaSailingApp Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F3B21EC0298BE21B007C93FF /* YaSailingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B21EBF298BE21B007C93FF /* YaSailingAppApp.swift */; };
-		F3B21EC2298BE21B007C93FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B21EC1298BE21B007C93FF /* ContentView.swift */; };
+		F3B21EC2298BE21B007C93FF /* TimerVew.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B21EC1298BE21B007C93FF /* TimerVew.swift */; };
 		F3B21EC4298BE21E007C93FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3B21EC3298BE21E007C93FF /* Assets.xcassets */; };
 		F3B21EC7298BE21E007C93FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3B21EC6298BE21E007C93FF /* Preview Assets.xcassets */; };
-		F3B21ED1298BE21E007C93FF /* YaSailingApp_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B21ED0298BE21E007C93FF /* YaSailingApp_Watch_AppTests.swift */; };
-		F3B21EDB298BE21E007C93FF /* YaSailingApp_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B21EDA298BE21E007C93FF /* YaSailingApp_Watch_AppUITests.swift */; };
-		F3B21EDD298BE21E007C93FF /* YaSailingApp_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B21EDC298BE21E007C93FF /* YaSailingApp_Watch_AppUITestsLaunchTests.swift */; };
+		F3B21EEF298FCDF7007C93FF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B21EEE298FCDF7007C93FF /* LocationManager.swift */; };
+		F3D9A8E229995E4F00621AD0 /* SessionTicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9A8E129995E4F00621AD0 /* SessionTicker.swift */; };
+		F3D9A8E429998DE700621AD0 /* TimerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9A8E329998DE700621AD0 /* TimerEngine.swift */; };
+		F3D9A8E6299BEFA000621AD0 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9A8E5299BEFA000621AD0 /* SettingView.swift */; };
+		F3D9A8E8299C35DF00621AD0 /* TimerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9A8E7299C35DF00621AD0 /* TimerConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		F3B21EBC298BE21B007C93FF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F3B21EAE298BE21B007C93FF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F3B21EB9298BE21B007C93FF;
-			remoteInfo = "YaSailingApp Watch App";
-		};
-		F3B21ECD298BE21E007C93FF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F3B21EAE298BE21B007C93FF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F3B21EB9298BE21B007C93FF;
-			remoteInfo = "YaSailingApp Watch App";
-		};
-		F3B21ED7298BE21E007C93FF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F3B21EAE298BE21B007C93FF /* Project object */;
 			proxyType = 1;
@@ -59,32 +47,19 @@
 		F3B21EB4298BE21B007C93FF /* YaSailingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YaSailingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3B21EBA298BE21B007C93FF /* YaSailingApp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YaSailingApp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3B21EBF298BE21B007C93FF /* YaSailingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YaSailingAppApp.swift; sourceTree = "<group>"; };
-		F3B21EC1298BE21B007C93FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F3B21EC1298BE21B007C93FF /* TimerVew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerVew.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		F3B21EC3298BE21E007C93FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3B21EC6298BE21E007C93FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		F3B21ECC298BE21E007C93FF /* YaSailingApp Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "YaSailingApp Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3B21ED0298BE21E007C93FF /* YaSailingApp_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YaSailingApp_Watch_AppTests.swift; sourceTree = "<group>"; };
-		F3B21ED6298BE21E007C93FF /* YaSailingApp Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "YaSailingApp Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3B21EDA298BE21E007C93FF /* YaSailingApp_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YaSailingApp_Watch_AppUITests.swift; sourceTree = "<group>"; };
-		F3B21EDC298BE21E007C93FF /* YaSailingApp_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YaSailingApp_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F3B21EED298EB15F007C93FF /* YaSailingApp-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "YaSailingApp-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		F3B21EEE298FCDF7007C93FF /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		F3D9A8E129995E4F00621AD0 /* SessionTicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTicker.swift; sourceTree = "<group>"; };
+		F3D9A8E329998DE700621AD0 /* TimerEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerEngine.swift; sourceTree = "<group>"; };
+		F3D9A8E5299BEFA000621AD0 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		F3D9A8E7299C35DF00621AD0 /* TimerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F3B21EB7298BE21B007C93FF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F3B21EC9298BE21E007C93FF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F3B21ED3298BE21E007C93FF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -98,8 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				F3B21EBE298BE21B007C93FF /* YaSailingApp Watch App */,
-				F3B21ECF298BE21E007C93FF /* YaSailingApp Watch AppTests */,
-				F3B21ED9298BE21E007C93FF /* YaSailingApp Watch AppUITests */,
 				F3B21EB5298BE21B007C93FF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,8 +82,6 @@
 			children = (
 				F3B21EB4298BE21B007C93FF /* YaSailingApp.app */,
 				F3B21EBA298BE21B007C93FF /* YaSailingApp Watch App.app */,
-				F3B21ECC298BE21E007C93FF /* YaSailingApp Watch AppTests.xctest */,
-				F3B21ED6298BE21E007C93FF /* YaSailingApp Watch AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,10 +89,16 @@
 		F3B21EBE298BE21B007C93FF /* YaSailingApp Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				F3B21EED298EB15F007C93FF /* YaSailingApp-Watch-App-Info.plist */,
 				F3B21EBF298BE21B007C93FF /* YaSailingAppApp.swift */,
-				F3B21EC1298BE21B007C93FF /* ContentView.swift */,
+				F3D9A8E5299BEFA000621AD0 /* SettingView.swift */,
+				F3B21EC1298BE21B007C93FF /* TimerVew.swift */,
 				F3B21EC3298BE21E007C93FF /* Assets.xcassets */,
 				F3B21EC5298BE21E007C93FF /* Preview Content */,
+				F3B21EEE298FCDF7007C93FF /* LocationManager.swift */,
+				F3D9A8E129995E4F00621AD0 /* SessionTicker.swift */,
+				F3D9A8E329998DE700621AD0 /* TimerEngine.swift */,
+				F3D9A8E7299C35DF00621AD0 /* TimerConfig.swift */,
 			);
 			path = "YaSailingApp Watch App";
 			sourceTree = "<group>";
@@ -132,23 +109,6 @@
 				F3B21EC6298BE21E007C93FF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		F3B21ECF298BE21E007C93FF /* YaSailingApp Watch AppTests */ = {
-			isa = PBXGroup;
-			children = (
-				F3B21ED0298BE21E007C93FF /* YaSailingApp_Watch_AppTests.swift */,
-			);
-			path = "YaSailingApp Watch AppTests";
-			sourceTree = "<group>";
-		};
-		F3B21ED9298BE21E007C93FF /* YaSailingApp Watch AppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F3B21EDA298BE21E007C93FF /* YaSailingApp_Watch_AppUITests.swift */,
-				F3B21EDC298BE21E007C93FF /* YaSailingApp_Watch_AppUITestsLaunchTests.swift */,
-			);
-			path = "YaSailingApp Watch AppUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,42 +148,6 @@
 			productReference = F3B21EBA298BE21B007C93FF /* YaSailingApp Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F3B21ECB298BE21E007C93FF /* YaSailingApp Watch AppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F3B21EE7298BE21E007C93FF /* Build configuration list for PBXNativeTarget "YaSailingApp Watch AppTests" */;
-			buildPhases = (
-				F3B21EC8298BE21E007C93FF /* Sources */,
-				F3B21EC9298BE21E007C93FF /* Frameworks */,
-				F3B21ECA298BE21E007C93FF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F3B21ECE298BE21E007C93FF /* PBXTargetDependency */,
-			);
-			name = "YaSailingApp Watch AppTests";
-			productName = "YaSailingApp Watch AppTests";
-			productReference = F3B21ECC298BE21E007C93FF /* YaSailingApp Watch AppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		F3B21ED5298BE21E007C93FF /* YaSailingApp Watch AppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F3B21EEA298BE21E007C93FF /* Build configuration list for PBXNativeTarget "YaSailingApp Watch AppUITests" */;
-			buildPhases = (
-				F3B21ED2298BE21E007C93FF /* Sources */,
-				F3B21ED3298BE21E007C93FF /* Frameworks */,
-				F3B21ED4298BE21E007C93FF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F3B21ED8298BE21E007C93FF /* PBXTargetDependency */,
-			);
-			name = "YaSailingApp Watch AppUITests";
-			productName = "YaSailingApp Watch AppUITests";
-			productReference = F3B21ED6298BE21E007C93FF /* YaSailingApp Watch AppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -239,14 +163,6 @@
 					};
 					F3B21EB9298BE21B007C93FF = {
 						CreatedOnToolsVersion = 14.2;
-					};
-					F3B21ECB298BE21E007C93FF = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = F3B21EB9298BE21B007C93FF;
-					};
-					F3B21ED5298BE21E007C93FF = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = F3B21EB9298BE21B007C93FF;
 					};
 				};
 			};
@@ -265,8 +181,6 @@
 			targets = (
 				F3B21EB3298BE21B007C93FF /* YaSailingApp */,
 				F3B21EB9298BE21B007C93FF /* YaSailingApp Watch App */,
-				F3B21ECB298BE21E007C93FF /* YaSailingApp Watch AppTests */,
-				F3B21ED5298BE21E007C93FF /* YaSailingApp Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -288,20 +202,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F3B21ECA298BE21E007C93FF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F3B21ED4298BE21E007C93FF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -309,25 +209,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3B21EC2298BE21B007C93FF /* ContentView.swift in Sources */,
+				F3D9A8E229995E4F00621AD0 /* SessionTicker.swift in Sources */,
+				F3D9A8E429998DE700621AD0 /* TimerEngine.swift in Sources */,
+				F3B21EC2298BE21B007C93FF /* TimerVew.swift in Sources */,
+				F3D9A8E8299C35DF00621AD0 /* TimerConfig.swift in Sources */,
+				F3D9A8E6299BEFA000621AD0 /* SettingView.swift in Sources */,
+				F3B21EEF298FCDF7007C93FF /* LocationManager.swift in Sources */,
 				F3B21EC0298BE21B007C93FF /* YaSailingAppApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F3B21EC8298BE21E007C93FF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F3B21ED1298BE21E007C93FF /* YaSailingApp_Watch_AppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F3B21ED2298BE21E007C93FF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F3B21EDD298BE21E007C93FF /* YaSailingApp_Watch_AppUITestsLaunchTests.swift in Sources */,
-				F3B21EDB298BE21E007C93FF /* YaSailingApp_Watch_AppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,16 +226,6 @@
 			isa = PBXTargetDependency;
 			target = F3B21EB9298BE21B007C93FF /* YaSailingApp Watch App */;
 			targetProxy = F3B21EBC298BE21B007C93FF /* PBXContainerItemProxy */;
-		};
-		F3B21ECE298BE21E007C93FF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F3B21EB9298BE21B007C93FF /* YaSailingApp Watch App */;
-			targetProxy = F3B21ECD298BE21E007C93FF /* PBXContainerItemProxy */;
-		};
-		F3B21ED8298BE21E007C93FF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F3B21EB9298BE21B007C93FF /* YaSailingApp Watch App */;
-			targetProxy = F3B21ED7298BE21E007C93FF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -466,12 +344,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"YaSailingApp Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = XRR68Q4FN7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = YaSailingApp;
+				INFOPLIST_FILE = "YaSailingApp-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = YASailingApp;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The location information is needed to show the current speed";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -481,6 +363,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ivan-b.YaSailingApp.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -495,12 +378,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"YaSailingApp Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = XRR68Q4FN7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = YaSailingApp;
+				INFOPLIST_FILE = "YaSailingApp-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = YASailingApp;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The location information is needed to show the current speed";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -510,6 +397,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ivan-b.YaSailingApp.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -526,6 +414,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XRR68Q4FN7;
 				INFOPLIST_KEY_CFBundleDisplayName = YaSailingApp;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ivan-b.YaSailingApp";
@@ -541,6 +430,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XRR68Q4FN7;
 				INFOPLIST_KEY_CFBundleDisplayName = YaSailingApp;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ivan-b.YaSailingApp";
@@ -548,86 +438,6 @@
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		F3B21EE8298BE21E007C93FF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ivan-b.YaSailingApp-Watch-AppTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YaSailingApp Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/YaSailingApp Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 9.1;
-			};
-			name = Debug;
-		};
-		F3B21EE9298BE21E007C93FF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ivan-b.YaSailingApp-Watch-AppTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YaSailingApp Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/YaSailingApp Watch App";
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 9.1;
-			};
-			name = Release;
-		};
-		F3B21EEB298BE21E007C93FF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ivan-b.YaSailingApp-Watch-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "YaSailingApp Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 9.1;
-			};
-			name = Debug;
-		};
-		F3B21EEC298BE21E007C93FF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ivan-b.YaSailingApp-Watch-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "YaSailingApp Watch App";
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 9.1;
 			};
 			name = Release;
 		};
@@ -657,24 +467,6 @@
 			buildConfigurations = (
 				F3B21EE5298BE21E007C93FF /* Debug */,
 				F3B21EE6298BE21E007C93FF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F3B21EE7298BE21E007C93FF /* Build configuration list for PBXNativeTarget "YaSailingApp Watch AppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F3B21EE8298BE21E007C93FF /* Debug */,
-				F3B21EE9298BE21E007C93FF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F3B21EEA298BE21E007C93FF /* Build configuration list for PBXNativeTarget "YaSailingApp Watch AppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F3B21EEB298BE21E007C93FF /* Debug */,
-				F3B21EEC298BE21E007C93FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

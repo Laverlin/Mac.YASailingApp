@@ -2,25 +2,35 @@
 //  ContentView.swift
 //  YaSailingApp Watch App
 //
-//  Created by BODYAGIN Ivan on 02.02.2023.
-//
 
 import SwiftUI
 
-struct ContentView: View {
+struct TimerVew: View {
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        
+        ZStack{
+            
+            let ss = WKInterfaceDevice.current().screenBounds
+            
+            Path { path in
+                path.addArc(center: CGPoint(x: ss.midX, y: ss.midY), radius: 90, startAngle: Angle(degrees: 275), endAngle: Angle(degrees: 0), clockwise: true)
+                
+            }
+            .stroke(Color.orange, lineWidth: 10)
+            .ignoresSafeArea()
+            
+            HStack{
+                Text("4:05")
+                    .font(.system(size: 50))
+            }
         }
-        .padding()
+        
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        TimerVew()
     }
 }
