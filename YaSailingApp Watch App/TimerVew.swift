@@ -28,6 +28,7 @@ struct TimerVew: View {
                     
                     let gradientColors =
                         [Color(hex: 0xC71FD6), Color(hex: 0xDC8219), Color(hex: 0x172EAA), Color(hex: 0xE93D3D)]
+                        //[Color(hex: 0xF3003D), Color(hex: 0xFD783F), Color(hex: 0xFFCF00), Color(hex: 0x00E6B0)]
                     Circle()
                         .trim(from: 0, to: CGFloat(te.getUiRemains(time: context.date)) / CGFloat(te.totalTime))
                         .stroke(style: StrokeStyle(
@@ -35,10 +36,16 @@ struct TimerVew: View {
                             lineCap: .butt,
                             lineJoin: .round,
                             dash: [1, 1.5]))
-                        .fill(LinearGradient(
-                            gradient: .init(colors: gradientColors),
-                            startPoint: .topLeading,
-                            endPoint: .trailing))
+                        .fill(
+//                            AngularGradient(
+//                                colors: gradientColors,
+//                                center: .center,
+//                                startAngle: .degrees(0),
+//                                endAngle: .degrees(360)))
+                            LinearGradient(
+                                gradient: .init(colors: gradientColors),
+                                startPoint: .topLeading,
+                                endPoint: .trailing))
                         .rotationEffect(.degrees(270))
                         .animation(.easeOut, value: te.getUiRemains(time: context.date))
                 }
@@ -85,6 +92,8 @@ struct TimerVew: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         TimerVew()
+            .environmentObject(TimerEngine())
+            .environmentObject(LocationManager())
     }
 }
 
