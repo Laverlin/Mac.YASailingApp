@@ -9,10 +9,18 @@ struct TimerVew: View {
 
     @EnvironmentObject var locationManager: LocationManager
     @EnvironmentObject var te: TimerEngine
+    @EnvironmentObject var tabState: TabState
 
     func startStop() {
         te.isRunning ? te.stopTicks() : te.startTicks()
     }
+    
+    func onTimeExpired() {
+        locationManager.startRecording()
+        tabState.tabId = 2
+    }
+    
+
     
     var body: some View {
         
@@ -62,6 +70,7 @@ struct TimerVew: View {
                         .monospaced()
                     
                     Text(!te.isRunning ? "Press to start " : " ")
+                        .font(.caption)
                 }
                 .onAppear {
                     if locationManager.isLocationEnabled {
@@ -69,7 +78,7 @@ struct TimerVew: View {
                     } 
                 }
                 .onDisappear {
-                    locationManager.stopUpdating()
+                   // locationManager.stopUpdating()
                 }
             }
         }
@@ -84,6 +93,9 @@ struct TimerVew: View {
             isHapticFeedbackEnabled: true)
         .onTapGesture(){ _ in
             startStop()
+        }
+        .onAppear {
+            te.setOnTimerExpired(action: onTimeExpired)
         }
     }
 }

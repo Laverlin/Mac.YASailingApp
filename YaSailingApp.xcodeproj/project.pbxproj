@@ -13,6 +13,7 @@
 		F3B21EC4298BE21E007C93FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3B21EC3298BE21E007C93FF /* Assets.xcassets */; };
 		F3B21EC7298BE21E007C93FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3B21EC6298BE21E007C93FF /* Preview Assets.xcassets */; };
 		F3B21EEF298FCDF7007C93FF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B21EEE298FCDF7007C93FF /* LocationManager.swift */; };
+		F3B236A329AFFC47006504CE /* CruiseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B236A229AFFC47006504CE /* CruiseView.swift */; };
 		F3D9A8E229995E4F00621AD0 /* SessionTicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9A8E129995E4F00621AD0 /* SessionTicker.swift */; };
 		F3D9A8E429998DE700621AD0 /* TimerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9A8E329998DE700621AD0 /* TimerEngine.swift */; };
 		F3D9A8E6299BEFA000621AD0 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9A8E5299BEFA000621AD0 /* SettingView.swift */; };
@@ -54,6 +55,7 @@
 		F3B21EED298EB15F007C93FF /* YaSailingApp-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "YaSailingApp-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		F3B21EEE298FCDF7007C93FF /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		F3B236A129AC0E3A006504CE /* YaSailingApp Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "YaSailingApp Watch App.entitlements"; sourceTree = "<group>"; };
+		F3B236A229AFFC47006504CE /* CruiseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CruiseView.swift; sourceTree = "<group>"; };
 		F3D9A8E129995E4F00621AD0 /* SessionTicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTicker.swift; sourceTree = "<group>"; };
 		F3D9A8E329998DE700621AD0 /* TimerEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerEngine.swift; sourceTree = "<group>"; };
 		F3D9A8E5299BEFA000621AD0 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				F3B21EBF298BE21B007C93FF /* YaSailingAppApp.swift */,
 				F3D9A8E5299BEFA000621AD0 /* SettingView.swift */,
 				F3B21EC1298BE21B007C93FF /* TimerVew.swift */,
+				F3B236A229AFFC47006504CE /* CruiseView.swift */,
 				F3B21EC3298BE21E007C93FF /* Assets.xcassets */,
 				F3B21EC5298BE21E007C93FF /* Preview Content */,
 				F3B21EEE298FCDF7007C93FF /* LocationManager.swift */,
@@ -214,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3D9A8E229995E4F00621AD0 /* SessionTicker.swift in Sources */,
+				F3B236A329AFFC47006504CE /* CruiseView.swift in Sources */,
 				F3D9A8E429998DE700621AD0 /* TimerEngine.swift in Sources */,
 				F3B21EC2298BE21B007C93FF /* TimerVew.swift in Sources */,
 				F3D9A8E8299C35DF00621AD0 /* TimerConfig.swift in Sources */,

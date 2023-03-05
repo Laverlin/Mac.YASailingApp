@@ -28,12 +28,17 @@ struct MainView: View {
         TabView(selection: $tabState.tabId) {
             SettingVew(totalTime: timerEngine.totalTime)
                 .environmentObject(timerEngine)
+                .environmentObject(locationManager)
                 .environmentObject(tabState)
                 .tag(0)
             TimerVew()
                 .environmentObject(timerEngine)
                 .environmentObject(locationManager)
+                .environmentObject(tabState)
                 .tag(1)
+            CruiseVew()
+                .environmentObject(locationManager)
+                .tag(2)
         }
         .tabViewStyle(.page(indexDisplayMode: .automatic))
     }
