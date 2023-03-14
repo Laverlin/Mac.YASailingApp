@@ -2,40 +2,42 @@ import Foundation
 import CoreLocation
 import SwiftUI
 
+
+struct LapInfo {
+    public var duration = 0.0
+    public var distance = 0.0
+    public var startTime: Date?
+    public var startDistance = 0.0
+}
+
 class LocationManager : NSObject, ObservableObject, CLLocationManagerDelegate {
 
-    @Published private (set) var isLocationEnabled: Bool
-    @Published private (set) var speedKn: Double
-    @Published private (set) var maxSpeedKn: Double
-    @Published private (set) var heading: Int
-    @Published private (set) var avgHeading: Int
-    @Published private (set) var isGpsGood: Bool
-    @Published private (set) var distanceNm: Double
-    @Published private (set) var durationSec: Double
-    @Published private (set) var isRecording: Bool
-    @Published private (set) var isLocationUpdates: Bool
+    @Published private (set) var isLocationEnabled = false
+    @Published private (set) var isLocationUpdates = false
+    @Published private (set) var isRecording = false
+    @Published private (set) var isGpsGood = false
+    @Published private (set) var speedKn = 0.0
+    @Published private (set) var maxSpeedKn = 0.0
+    @Published private (set) var heading = 0
+    @Published private (set) var avgHeading = 0
+    @Published private (set) var distanceNm = 0.0
+    @Published private (set) var durationSec = 0.0
+    @Published private (set) var laps: [LapInfo]
+
+
     
     private let _locationManager: CLLocationManager
     private var _avgHolder: [Double]
     private var _lastLocation: CLLocation?
     private var _startTime: Date?
-    private var _savedDuration: Double
+    private var _savedDuration = 0.0
+    private var _lastLap = LapInfo()
     
     
     override init() {
         _locationManager = CLLocationManager()
         _avgHolder = Array()
-        _savedDuration = 0
-        isRecording = false
-        isLocationEnabled = false
-        isLocationUpdates = false
-        speedKn = 0.0
-        maxSpeedKn = 0.0
-        heading = 0
-        avgHeading = 0
-        isGpsGood = false
-        distanceNm = 0
-        durationSec = 0
+        laps = Array()
 
         super.init()
         _locationManager.delegate = self
@@ -51,6 +53,7 @@ class LocationManager : NSObject, ObservableObject, CLLocationManagerDelegate {
     
     public func stopUpdating() {
         _locationManager.stopUpdatingLocation()
+        stopRecording()
         isLocationUpdates = false
     }
     
@@ -58,12 +61,16 @@ class LocationManager : NSObject, ObservableObject, CLLocationManagerDelegate {
         guard isLocationUpdates else { return }
         isRecording = true
         _startTime = Date()
+        _lastLap = LapInfo(startTime: Date(), startDistance: distanceNm)
     }
     
     public func stopRecording() {
         isRecording = false
-        durationSec = _startTime != nil ? Date().timeIntervalSince(_startTime!) : 0
-        _savedDuration += durationSec
+        durationSec = _savedDuration + (_startTime != nil ? Date().timeIntervalSince(_startTime!) : 0)
+        _savedDuration = durationSec
+        _lastLap.duration = _lastLap.startTime != nil ? Date().timeIntervalSince(_lastLap.startTime!) : 0
+        _lastLap.distance = distanceNm - _lastLap.startDistance
+        laps.append(_lastLap)
     }
     
     internal func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
