@@ -9,6 +9,7 @@ class TimerEngine: NSObject, SessionTickerDelegate, ObservableObject {
     private var _sessionTicker: SessionTicker
     private var _totalTime: Int
     private var _adjustment: Int
+    private var _onExpiredAction: () -> Void
 
     @Published var remains: Int
     @Published var mins = 0
@@ -19,6 +20,7 @@ class TimerEngine: NSObject, SessionTickerDelegate, ObservableObject {
         self._adjustment = 0
         self.remains = 0
         self._sessionTicker = SessionTicker()
+        self._onExpiredAction = {}
         
         super .init()
         self._sessionTicker.delegate = self
@@ -44,6 +46,10 @@ class TimerEngine: NSObject, SessionTickerDelegate, ObservableObject {
                 _sessionTicker.startTime = Date()
             }
         }
+    }
+    
+    public func setOnTimerExpired(action: @escaping () -> Void) {
+        _onExpiredAction = action
     }
     
     // Start or resume tick
@@ -76,6 +82,9 @@ class TimerEngine: NSObject, SessionTickerDelegate, ObservableObject {
         
         if remains <= 0 {
             WKInterfaceDevice.current().play(.success)
+            if isRunning {
+                self._onExpiredAction()
+            }
             self._sessionTicker.stop()
             self._adjustment = 0
         }

@@ -6,6 +6,7 @@ struct SettingVew: View {
 
     @EnvironmentObject var timerEngine: TimerEngine
     @EnvironmentObject var tabState: TabState
+    @EnvironmentObject var locationManager: LocationManager
     @State private var _totalTime: Int
 
     init(totalTime: Int) {
@@ -45,6 +46,11 @@ struct SettingVew: View {
             }
             .font(.caption)
             .padding()
+        }
+        .onAppear {
+            if locationManager.isLocationEnabled {
+                locationManager.startUpdating()
+            }
         }
     }
 }
