@@ -1,19 +1,55 @@
 import SwiftUI
 
+enum DeviceSize: Int {
+    case small = 1
+    case medium = 2
+    case large = 3
+}
+
+struct DeviceParams {
+    public var deviceSize: DeviceSize
+    public var mainFontSize: Double
+    public var smallCaptionPaddingTop: Double
+    public var smallCaptionPaddingLeft: Double
+    public var summaryFontSize: Double
+    
+    init(_ screenWidth: Double){
+
+        switch screenWidth {
+        case 150..<180:
+            deviceSize = DeviceSize.small
+            mainFontSize = 36
+            smallCaptionPaddingTop = -8
+            smallCaptionPaddingLeft = -4
+            summaryFontSize = 12
+        case 190..<200:
+            deviceSize = DeviceSize.medium
+            mainFontSize = 50
+            smallCaptionPaddingTop = -13
+            smallCaptionPaddingLeft = -10
+            summaryFontSize = 14
+        default:
+            deviceSize = DeviceSize.large
+            mainFontSize = 52
+            smallCaptionPaddingTop = -13
+            smallCaptionPaddingLeft = -14
+            summaryFontSize = 14
+        //default: break
+        }
+    }
+}
+
+
 struct CruiseVew: View {
     
     @EnvironmentObject var locationManager: LocationManager
-    //private var _hFrameHeight = 50.0
+
     private let _rFrameWidth = 60.0
     private let _screenSize = WKInterfaceDevice.current().screenBounds
-    private var _fontSize = 52.0
+    private var _deviceParams: DeviceParams
     
     init() {
-        switch _screenSize.width {
-        case 198.0 : _fontSize = 50
-        case 150..<180 : _fontSize = 36
-        default: break;
-        }
+        _deviceParams = DeviceParams(_screenSize.width)
     }
     
     func getSpeedColor() -> Color {
@@ -38,11 +74,7 @@ struct CruiseVew: View {
         : locationManager.startRecording()
     }
     
-    
-    
     var body: some View {
-        
-        
         
         VStack {
             
@@ -66,14 +98,15 @@ struct CruiseVew: View {
                     .frame(width: _screenSize.width, alignment: .leading)
                     .font(.system(size: 12))
                     .padding(.leading, 8)
-                    .padding([.bottom], -4)
+                    .padding([.top], -2)
+                    .padding([.bottom], -2)
                     .foregroundColor(Color(.lightGray))
             }
             HStack {
                 Text(String(format: "%04.1f", locationManager.speedKn))
                     .lineLimit(1)
                     .fixedSize()
-                    .font(.system(size: _fontSize))
+                    .font(.system(size: _deviceParams.mainFontSize))
                     .fontWeight(Font.Weight.bold)
                     .padding([.bottom, .trailing], 8)
                     .monospaced()
@@ -102,21 +135,21 @@ struct CruiseVew: View {
                 
                 
             }
-            .frame(height: _fontSize)
+            .frame(height: _deviceParams.mainFontSize - 8)
             //.background(Color(.gray))
             Divider()
             Text("COG")
                 .frame(width: _screenSize.width, alignment: .leading)
                 .font(.system(size: 12))
-                .padding([.top], 0)
-                .padding(.bottom, -4)
+                .padding([.top], -4)
+                .padding(.bottom, -2)
                 .padding(.leading, 8)
                 .foregroundColor(Color(.lightGray))
             HStack {
                 Text(String(format: "%03d", locationManager.heading))
                     .lineLimit(1)
                     .fixedSize()
-                    .font(.system(size: _fontSize))
+                    .font(.system(size: _deviceParams.mainFontSize))
                     .fontWeight(Font.Weight.bold)
                     .padding([.bottom, .trailing])
                     .monospaced()
@@ -137,15 +170,26 @@ struct CruiseVew: View {
                         .frame(width: _rFrameWidth, alignment: .trailing)
                 }//.background(Color(.blue))
             }
-            .frame(height: _fontSize)
+            .frame(height: _deviceParams.mainFontSize - 8)
             //.background(Color(.gray))
             Divider()
+
+            
             HStack {
                 VStack {
+                    HStack(alignment: .top) {
+                        Text("total")
+                            .font(.system(size: 9))
+                            .foregroundColor(Color(.lightGray))
+                            .padding([.top], _deviceParams.smallCaptionPaddingTop)
+                            .padding([.leading], _deviceParams.smallCaptionPaddingLeft)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        
+                    }
                     HStack(alignment: .bottom) {
                         Spacer()
                         Text(String(format: "%06.2f", locationManager.distanceNm))
-                            .font(.system(size: 14, design: .monospaced))
+                            .font(.system(size: _deviceParams.summaryFontSize, design: .monospaced))
                             .foregroundColor(locationManager.isRecording ? Color(.white) : Color(.lightGray))
                             .padding(.bottom, -2)
                         Text(" nm")
@@ -155,24 +199,52 @@ struct CruiseVew: View {
                     
                     HStack(alignment: .bottom) {
                         Spacer()
-                        Text("\(String(format: "%01d", locationManager.durationSec.hours)):\(String(format: "%02d", locationManager.durationSec.minutes)):\(String(format: "%02d", locationManager.durationSec.seconds))")
-                            .font(.system(size: 14, design: .monospaced))
+                        Text(locationManager.durationSec.asShortString)
+                            .font(.system(size: _deviceParams.summaryFontSize, design: .monospaced))
                             .foregroundColor(locationManager.isRecording ? Color(.white) : Color(.lightGray))
                             .padding(.bottom, -2)
                         Image(systemName: "clock")
                             .font(.system(size: 8))
                             .foregroundColor(Color(.lightGray))
-
-
                     }
                 }
                 .fixedSize(horizontal: true, vertical: false)
                 .frame(width: _screenSize.width / 2, alignment: .trailing)
                 
                 Divider()
+
                 
-                VStack() {
-                    Spacer()
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text("last lap")
+                            .font(.system(size: 9))
+                            .foregroundColor(Color(.lightGray))
+                            .padding([.top], _deviceParams.smallCaptionPaddingTop)
+                            .padding([.leading], _deviceParams.smallCaptionPaddingLeft - 6)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                    
+                    HStack(alignment: .bottom) {
+                        Text(String(format: "%06.2f", locationManager.laps.last?.distance ?? 0))
+                            .font(.system(size: _deviceParams.summaryFontSize, design: .monospaced))
+                            .foregroundColor(Color(.lightGray))
+                            .padding(.bottom, -2)
+                            .padding(.leading, -10)
+                        Text(" nm")
+                            .font(.system(size: 10))
+                            .foregroundColor(Color(.lightGray))
+                    }
+                    
+                    HStack(alignment: .bottom) {
+                        Text(locationManager.laps.last?.duration.asShortString ?? "0:00:00")
+                            .font(.system(size: _deviceParams.summaryFontSize, design: .monospaced))
+                            .foregroundColor(Color(.lightGray))
+                            .padding(.bottom, -2)
+                            .padding(.leading, -10)
+                        Image(systemName: "clock")
+                            .font(.system(size: 8))
+                            .foregroundColor(Color(.lightGray))
+                    }
                 }
                 .fixedSize(horizontal: true, vertical: false)
                 .frame(width: _screenSize.width / 2)
@@ -208,6 +280,7 @@ struct CruiseView_Previews: PreviewProvider {
 }
 
 extension TimeInterval {
+    
     var hours: Int {
         Int(self / 3600)
     }
@@ -218,5 +291,9 @@ extension TimeInterval {
     
     var seconds: Int {
         Int(self.truncatingRemainder(dividingBy: 3600).truncatingRemainder(dividingBy: 60))
+    }
+    
+    var asShortString: String {
+        "\(String(format: "%01d", self.hours)):\(String(format: "%02d", self.minutes)):\(String(format: "%02d", self.seconds))"
     }
 }
